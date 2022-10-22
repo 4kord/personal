@@ -29,7 +29,6 @@ let update = () => {
             document.querySelector(".main").style.opacity = 1;
         }, 500);
         i = 0;
-        setTimeout(updateTag, 5000);
     }
 }
 update();

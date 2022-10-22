@@ -14,6 +14,11 @@ body {
     scroll-behavior: smooth;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    color: #eee;
+    text-align: center;
+}
+
 h1 {
     font-size: 1.5em;
 	color: #eee;
@@ -22,11 +27,6 @@ h1 {
 	position: absolute;
 	transform: translateX(-50%) translateY(-50%) scale(2, 2);
 	transition: 0.5s ease-in-out;
-}
-
-p {
-    color: #eee;
-    text-align: center;
 }
 
 header {
@@ -51,27 +51,22 @@ header {
 }
 
 .coloranim {
-    animation: language-color-change 5s infinite;
+    animation: color-change 5s infinite;
 }
 
 .coloranim:hover {
     cursor: pointer;
 }
 
-@keyframes language-color-change {
-    0% { color: rgb(194, 52, 194); }
-    50% { color: rgb(100, 100, 245); }
-    100% { color: rgb(194, 52, 194); }
+@keyframes color-change {
+    0% { color: rgb(194, 52, 194); fill: rgb(194, 52, 194); }
+    50% { color: rgb(100, 100, 245); fill: rgb(100, 100, 245); }
+    100% { color: rgb(194, 52, 194); fill: rgb(194, 52, 194); }
 }
 
 .hidden {
     display: none;
 }
-
-.editor .editorheader .buttons div:hover{
-    cursor: pointer;
-}
-
 
 @media only screen and (min-width: 768px) {
     .container {
@@ -91,4 +86,19 @@ a {
 
 a:hover {
     opacity: 1;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+path {
+    fill: white;
+}
+
+.project {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
